@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fakturor att attestera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 2px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+
+    <style>
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+</style>
+</head>
+<body>
+
+<div>
+    <div style="position:fixed; top:20px;">
+        <img src="https://i.ibb.co/0MZFnpq/unit4-business-world-logga.jpg" width="250" height="50" alt="unit4-business-world-logga" border="0">
+    </div>
+    <div style="position:fixed; top:10px; left:1000px;">
+        <img src="https://i.ibb.co/WfWSfX2/top-menu-heart.jpg" alt="top-menu-heart" width="30" height="30" border="0">
+    </div>
+    <div style="position:fixed; top:10px; left:1040px;">
+        <img src="https://i.ibb.co/94bQX5g/history.jpg" alt="history" width="25" height="25" border="0">
+    </div>
+    <div style="position:fixed; top:10px; left:1080px;">
+        <p style="font-family:arial; font-size:7px;">701 - Stadsdelsnämnd Rinke...</p>
+    </div>
+    <div style="position:fixed; top:10px; left:1190px;">
+        <img src="https://i.ibb.co/VgrqHYN/image-10.jpg" alt="image-10" width="22" height="22" border="0">
+    </div>
+    <div style="position:fixed; top:10px; left:1215px;">
+        <p style="font-family:arial; font-size:7px;">AA10733</p>
+    </div>
+    <div style="position:fixed; top:10px; left:1250px;">
+        <img src="https://i.ibb.co/QrCQ108/bell.jpg" alt="bell" width="22" height="22" border="0">
+    </div>
+    <div style="position:fixed; top:10px; left:1280px;">
+        <div class="dropdown">
+            <img class="notiser" src="https://i.ibb.co/Vx44qXP/notiser.jpg" width="45" height="25" border="0">
+            <!--<button class="dropbtn">Dropdown</button> -->
+            <div class="dropdown-content">
+                <a href="inkfakturor.html">701 - Godkänna inköpsfaktura (2)</a>
+                <a href="fakturor.html">701 - Godkänna leverantörsfaktura (609)</a>
+                <a href="#">701 - Matcha avvikelse i inköpsfaktura</a>
+            </div>
+        </div>
+
+    </div>
+    <div style="position:fixed; top:10px; left:1340px;">
+        <form id="form">
+            <input type="search" id="query" name="q" placeholder="Sök...">
+            <button>Sök</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <div style="position:fixed; top:120px">
+        <canvas id="topbar" width="1980" height="30"></canvas>
+        <script>
+    var canvas2 = document.getElementById("topbar");
+    var ctx2 = canvas2.getContext("2d");
+    ctx2.fillStyle = "#EDEDED";
+    ctx2.fillRect(0,0,1980,50);
+  </script>
+</div>
+</div>
+
+<div>
+<div style="position:fixed; top:100px; left:80px;">
+    <img src="https://i.ibb.co/c6f0hfC/list-button.jpg" alt="list-button" width="50" height="30" border="0">
+</div>
+    <div style="position:fixed; top:100px; left:140px;">
+        <a href="Agresso.html"><img src="https://i.ibb.co/P9Ynjdq/jpg.jpg" alt="jpg" width="50" height="30" border="0"></a>
+    </div>
+    <div style="position:fixed; top:100px; left:200px;">
+        <img src="https://i.ibb.co/znMpH0n/Godk-nna-leverant-rssfaktura.jpg" alt="Godk-nna-leverant-rssfaktura" width="150" height="30" border="0">
+    </div>
+</div>
+<div>
+    <div style="position:fixed; top:160px; left:50px;">
+        <img src="https://i.ibb.co/d7mFZmx/fakturameny.jpg" alt="fakturameny" width="190" height="430" usemap="#levfakturamap" border="0">
+        <map name="levfakturamap">
+            <area shape="rect" coords="0, 0, 190, 62" href="levfaktura1.html" alt="Leveransfaktura1">
+            <area shape="rect" coords="0, 124, 190, 62" href="levfaktura2.html" alt="Leveransfaktura2">
+            <area shape="rect" coords="0, 186, 190, 62" href="levfaktura3.html" alt="Leveransfaktura3">
+            <area shape="rect" coords="0, 248, 190, 62" href="levfaktura4.html" alt="Leveransfaktura4">
+            <area shape="rect" coords="0, 310, 190, 62" href="levfaktura5.html" alt="Leveransfaktura5">
+            <area shape="rect" coords="0, 372, 190, 62" href="levfaktura6.html" alt="Leveransfaktura6">
+            <area shape="rect" coords="0, 434, 190, 62" href="levfaktura7.html" alt="Leveransfaktura7">
+        </map>
+    </div>
+    <div style="position:fixed; top:600px; left:50px;">
+       <center>
+           <div class="pagination">
+               <a href="#">&laquo;</a>
+               <a class="active" href="#">1</a>
+               <a href="#">2</a>
+               <a href="#">3</a>
+               <a href="#">4</a>
+               <a href="#">5</a>
+               <a href="#">6</a>
+               <a href="#">&raquo;</a>
+           </div>
+       </center>
+    </div>
+</div>
+
+
+<div style="position:fixed; top:160px; left:260px; border:1px solid #000; border-opacity:0.6;">
+    <canvas id="meny" width="1200px" height="450px"></canvas>
+    <script>
+    var canvas = document.getElementById("fakturaDisplay");
+    var ctx = canvas.getContext("2d");
+  </script>
+</div>
+</body>
+</html>

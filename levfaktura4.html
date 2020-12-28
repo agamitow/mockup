@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fakturor att attestera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 2px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+
+    <style>
+
+.dropdown {
+  position: fixed;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+</style>
+
+    <style>
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    </style>
+</head>
+<body>
+<div style="overflow:auto;">
+    <div>
+        <div style="position:fixed; top:20px;">
+            <img src="https://i.ibb.co/0MZFnpq/unit4-business-world-logga.jpg" width="250" height="50" alt="unit4-business-world-logga" border="0">
+        </div>
+        <div style="position:fixed; top:10px; left:1000px;">
+            <img src="https://i.ibb.co/WfWSfX2/top-menu-heart.jpg" alt="top-menu-heart" width="30" height="30" border="0">
+        </div>
+        <div style="position:fixed; top:10px; left:1040px;">
+            <img src="https://i.ibb.co/94bQX5g/history.jpg" alt="history" width="25" height="25" border="0">
+        </div>
+        <div style="position:fixed; top:10px; left:1080px;">
+            <p style="font-family:arial; font-size:7px;">701 - Stadsdelsnämnd Rinke...</p>
+        </div>
+        <div style="position:fixed; top:10px; left:1190px;">
+            <img src="https://i.ibb.co/VgrqHYN/image-10.jpg" alt="image-10" width="22" height="22" border="0">
+        </div>
+        <div style="position:fixed; top:10px; left:1215px;">
+            <p style="font-family:arial; font-size:7px;">AA10733</p>
+        </div>
+        <div style="position:fixed; top:10px; left:1250px;">
+            <img src="https://i.ibb.co/QrCQ108/bell.jpg" alt="bell" width="22" height="22" border="0">
+        </div>
+        <div style="position:fixed; top:10px; left:1280px;">
+            <div class="dropdown">
+                <img class="notiser" src="https://i.ibb.co/Vx44qXP/notiser.jpg" width="45" height="25" border="0">
+                <!--<button class="dropbtn">Dropdown</button> -->
+                <div class="dropdown-content">
+                    <a href="inkfakturor.html">701 - Godkänna inköpsfaktura (2)</a>
+                    <a href="fakturor.html">701 - Godkänna leverantörsfaktura (609)</a>
+                    <a href="#">701 - Matcha avvikelse i inköpsfaktura</a>
+                </div>
+            </div>
+
+        </div>
+        <div style="position:fixed; top:10px; left:1340px;">
+            <form id="form">
+                <input type="search" id="query" name="q" placeholder="Sök...">
+                <button>Sök</button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div style="position:fixed; top:120px">
+            <canvas id="topbar" width="1980" height="30"></canvas>
+            <script>
+    var canvas2 = document.getElementById("topbar");
+    var ctx2 = canvas2.getContext("2d");
+    ctx2.fillStyle = "#EDEDED";
+    ctx2.fillRect(0,0,1980,50);
+  </script>
+        </div>
+    </div>
+
+    <div>
+        <div style="position:fixed; top:100px; left:80px;">
+            <img src="https://i.ibb.co/c6f0hfC/list-button.jpg" alt="list-button" width="50" height="30" border="0">
+        </div>
+        <div style="position:fixed; top:100px; left:140px;">
+            <a href="Agresso.html"><img src="https://i.ibb.co/P9Ynjdq/jpg.jpg" alt="jpg" width="50" height="30" border="0"></a>
+        </div>
+        <div style="position:fixed; top:100px; left:200px;">
+            <img src="https://i.ibb.co/znMpH0n/Godk-nna-leverant-rssfaktura.jpg" alt="Godk-nna-leverant-rssfaktura" width="150" height="30" border="0">
+        </div>
+    </div>
+    <div>
+        <div style="position:fixed; top:160px; left:50px;">
+            <img src="https://i.ibb.co/d7mFZmx/fakturameny.jpg" alt="fakturameny" width="190" height="430" usemap="#levfakturamap" border="0">
+            <map name="levfakturamap">
+                <area shape="rect" coords="0, 0, 190, 62" href="levfaktura1.html" alt="Leveransfaktura1">
+                <area shape="rect" coords="0, 124, 190, 62" href="levfaktura2.html" alt="Leveransfaktura2">
+                <area shape="rect" coords="0, 186, 190, 62" href="levfaktura3.html" alt="Leveransfaktura3">
+                <area shape="rect" coords="0, 248, 190, 62" href="levfaktura4.html" alt="Leveransfaktura4">
+                <area shape="rect" coords="0, 310, 190, 62" href="levfaktura5.html" alt="Leveransfaktura5">
+                <area shape="rect" coords="0, 372, 190, 62" href="levfaktura6.html" alt="Leveransfaktura6">
+                <area shape="rect" coords="0, 434, 190, 62" href="levfaktura7.html" alt="Leveransfaktura7">
+            </map>
+        </div>
+        <div style="position:fixed; top:600px; left:50px;">
+            <center>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a class="active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </center>
+        </div>
+    </div>
+
+    <div style="position:fixed; top:175px; left:275px;">
+        <img src="https://i.ibb.co/mRTMgv1/notis.jpg" alt="notis" width="750" height="20" border="0">
+    </div>
+
+    <div style="position:fixed; top:200px; left:275px;">
+        <p><b>Information leverantörsfaktura</b></p>
+        <div style="position:fixed; top:240px; font-size:10px;">
+            <p><b>Leverantör</b>       Energi Försäljning Sverige AB<br>
+                <b>Fakturanr</b>       EFS-1170597<br>
+                <b>Verifikationsnr</b> 2010268788<br>
+                <b>Fakturadatum</b>    2020-12-08<br>
+                <b>Bet.metod</b>       PG<br>
+                <b>Bet.</b><br>
+            </p>
+        </div>
+        <div style="position:fixed; top:250x; left:500px; font-size:10px;">
+            <p><b>Totalt fakturabelopp</b> 2,00<br>
+                <b>Ska godkännas</b> 2,00<br>
+                <b>Förfällodatum</b> 2020-12-28<br>
+            </p>
+        </div>
+    </div>
+    <div style="position:fixed; top:320px; left:275px;">
+        <p><b>Logg arbetsflöde</b></p>
+        <div style="positon:fixed; top:340px; left:275px;">
+            <select name="Logg arbetsflöde" size="4">
+                <option value="1">2020-12-10 13:57 Lenitha Åborm - "FLAGB" (AA81068) - "KST? Finns ej i objektregistret"</option>
+                <option value="2">2020-12-10 13:57 Lenitha Åborm - "FLAGB" (AA81068) - Omfördelad</option>
+                <option value="3">2020-12-09 21:26 TEIS - automatisk rapportbeställare (TEIS) - "Fakturans avtalstid och/eller objekttid saknas"</option>
+                <option value="4">TEIS - automatisk rapportbeställare (TEIS) - Distribuerad</option>
+            </select>
+        </div>
+        <div style="position:fixed; top:470x; left:275px;">
+            <input type="text" id="comment" name="comment"><br><br>
+        </div>
+        <div style="position:fixed; top:470px; left:275px;">
+            <input type="submit" value="Kopiera">
+        </div>
+    </div>
+    <div style="position:fixed; top:500px; left:275px;">
+        <p><b>Period. via nycklar</b></p>
+    </div>
+    <div style="position:fixed; top:540px; left:275px;">
+        <form action="/action_page.php">
+            <label for="fordelning">Fördelning</label><br>
+            <select name="fordelning" id="fordelning">
+                <option value="month">01 - Fördelning över en månad</option>
+                <option value="quarter">03 - Fördelning över en kvartal</option>
+            </select><br>
+            <div style="position:fixed; top:540px; left:520px;">
+                <label for="startperiod">Startperiod</label><br>
+                <select name="startperiod" id="startperiod">
+                    <option value="jan21">202101</option>
+                    <option value="dec20">202012</option>
+                    <option value="nov20">202011</option>
+                    <option value="oct20">202010</option>
+                    <option value="sep20">202009</option>
+                    <option value="aug20">202008</option>
+                </select>
+                <br><br>
+            </div>
+            <input type="submit" value="Manuell periodisering">
+        </form>
+    </div>
+    <div style="position:fixed; top:160px; left:1100px;">
+        <p><b>Bild</b></p>
+    </div>
+    <div style="position:fixed; top:200px; left:1100px;">
+        <img src="https://i.ibb.co/3NCCdzg/share.jpg" alt="share" width="25" height="25" border="0">
+    </div>
+    <div style="position:fixed; top:200px; left:1125px;">
+        <a href="https://i.ibb.co/2cjgQFH/Agresso-5.png"><img src="https://i.ibb.co/LR1Dzp1/print.jpg" alt="print" width="25" height="25" border="0"></a>
+    </div>
+    <div style="position:fixed; top:240px; left:1100px;">
+        <div style="position:fixed; left:1100px; height:300px;width:300px;overflow:auto;">
+            <img src="https://i.ibb.co/2cjgQFH/Agresso-5.png" alt="Agresso-5" border="0">
+        </div>
+    </div>
+    <div style="position:fixed; top:560px; left:1100px;">
+        <a href="levfaktura3.html"><button type="button">Föregående</button></a>
+    </div>
+    <div style="position:fixed; top:560px; left:1200px;">
+        <a href="levfaktura5.html"><button type="button">Nästa</button></a>
+    </div>
+    <div style="position:fixed; top:600px; left:275px">
+        <p><b>Detaljer leverantörsfaktura</b></p>
+    </div>
+    <div style="position:fixed; top:630px; left:275px;">
+        <table style="width:100px; font-size:8px;">
+            <tr>
+                <th>Översikt</th>
+                <th>Moms</th>
+                <th>Status</th>
+                <th>Valuta</th>
+                <th>Valutabelopp</th>
+                <th>Konto</th>
+                <th>Kst</th>
+                <th>Projekt</th>
+                <th>Verkhet</th>
+                <th>Aktiv</th>
+                <th>Motpart</th>
+                <th>Momskod</th>
+                <th>Momssystem</th>
+                <th>Beskrivning</th>
+                <th>AVS.MAN</th>
+                <th> </th>
+            </tr>
+            <tr>
+                <td><img src="https://i.ibb.co/d7n9CYP/versikt-lev.jpg" alt="versikt-lev" width="10" height="10" border="0"></td>
+                <td><img src="https://i.ibb.co/tsTCWkN/moms-lev.jpg" alt="moms-lev" width="10" height="10" border="0"></td>
+                <td> </td>
+                <td>SEK</td>
+                <td>2,00</td>
+                <td><input type="text" id="Konto" value="6013" size="4"></td>
+                <td><input type="text" id="Kst" value="159" size="4"></td>
+                <td><input type="text" id="Projekt" value="1" size="4"></td>
+                <td><input type="text" id="Verkhet" value="1335" size="4"></td>
+                <td><input type="text" id="Aktiv" value="" size="4"></td>
+                <td><input type="text" id="Motpart" value="2217" size="4"></td>
+                <td>0 - ingen moms</td>
+                <td><input type="text" id="Momssystem" value="" size="4"></td>
+                <td><input type="text" id="Beskrivning" value="1-2996783" size="4"></td>
+                <td><input type="text" id="AVSMAN" value="1,00" size="4"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><img src="https://i.ibb.co/d7n9CYP/versikt-lev.jpg" alt="versikt-lev" width="10" height="10" border="0"></td>
+                <td><img src="https://i.ibb.co/tsTCWkN/moms-lev.jpg" alt="moms-lev" width="10" height="10" border="0"></td>
+                <td> </td>
+                <td>SEK</td>
+                <td>-0,00</td>
+                <td>2518</td>
+                <td> </td>
+                <td> </td>
+                <td>LR</td>
+                <td> </td>
+                <td>2217</td>
+                <td>0</td>
+                <td> </td>
+                <td> </td>
+                <td>0,00</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td>2,00</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+        </table>
+    </div>
+    <div style="position:fixed; top:650px; left:30px">
+        <button type="button" style="background-color:blue" onclick="#">Godkänn</button>
+    </div>
+    <div style="position:fixed; top:650px; left:105px;">
+        <button type="button" onclick="#">Parkera</button>
+    </div>
+    <div style="position:fixed; top:650px; left:175px;">
+        <button type="button" onclick="#">Avvisa</button>
+    </div>
+    <div style="position:fixed; top:680px; left:30px;">
+        <button type="button" onclick="#">Till avancerat läge</button>
+    </div>
+    <div style="position:fixed; top:680px; left:160px;">
+        <button type="button" onclick="#">Logg arbetsf.</button>
+    </div>
+    <div style="position:fixed; top:710px; left:30px;">
+        <button type="button" onclick="#">Hämta mall</button>
+    </div>
+    <div style="position:fixed; top:710px; left:120px">
+        <button type="button" onclick="#">Skapa/redigera mall</button>
+    </div>
+    <div style="position:fixed; top:740px; left:30px;">
+        <button type="button" onclick="#">Loggbok</button>
+    </div>
+    <div style="position:fixed; top:740px; left:100px;">
+        <button type="button" onclick="#">Export</button>
+    </div>
+
+</div>
+
+</body>
+</html>
